@@ -1,6 +1,6 @@
 import logging
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import CommandHandler, CallbackQueryHandler, ApplicationBuilder, CallbackContext
+from telegram.ext import CommandHandler, CallbackQueryHandler, ApplicationBuilder, ContextTypes
 
 # Включаем логирование
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -8,11 +8,11 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-# Вставьте сюда ваш токен
+# Ваш токен бота
 TOKEN = '7470545997:AAHGtVEE_zLlR_4kP-ukhX5DPpsKJPOoeIg'
 CHANNEL_INVITE_LINK = 'https://t.me/+5vht0SB6tl43YTMy'  # Ссылка-приглашение к вашему приватному каналу
 
-async def start(update: Update, context: CallbackContext) -> None:
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = update.message.from_user
     chat_id = update.message.chat_id
 
