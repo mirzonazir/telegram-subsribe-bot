@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 # Ваш токен бота
-TOKEN = '7470545997:AAHGtVEE_zLlR_4kP-ukhX5DPpsKJPOoeIg'
+TOKEN = 'change_me'
 CHANNEL_INVITE_LINK = 'https://t.me/+5vht0SB6tl43YTMy'  # Ссылка-приглашение к вашему приватному каналу
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
